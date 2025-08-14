@@ -1,11 +1,140 @@
 <!DOCTYPE html>
-<html lang="zh-CN">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>我的主页</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chenhao Hu - Personal Homepage</title>
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap" rel="stylesheet">
+    <!-- Lucide Icons -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <style>
+        /* Custom font */
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+        /* Card hover effect */
+        .card-hover {
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        .card-hover:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+        }
+    </style>
 </head>
-<body>
-    <h1>你好，我是胡晨昊</h1>
-    <p>欢迎来到我的个人主页！</p>
+<body class="bg-gray-100 text-gray-800">
+
+    <!-- Main Container -->
+    <div class="container mx-auto max-w-4xl p-4 sm:p-6 lg:p-8">
+
+        <!-- Header Section -->
+        <header class="flex flex-col sm:flex-row items-center justify-between mb-10">
+            <div>
+                <h1 class="text-4xl font-bold text-gray-900">Chenhao Hu</h1>
+                <p class="text-lg text-gray-600 mt-2">Harbin Institute of Technology, Shenzhen | Computer Science and Technology</p>
+            </div>
+            <div class="flex space-x-3 mt-4 sm:mt-0">
+                <a href="mailto:xingzhehu80@gmail.com" class="text-gray-600 hover:text-blue-600">
+                    <i data-lucide="mail" class="w-6 h-6"></i>
+                </a>
+                <a href="https://github.com/Xingzhehu" target="_blank" rel="noopener noreferrer" class="text-gray-600 hover:text-gray-900">
+                    <i data-lucide="github" class="w-6 h-6"></i>
+                </a>
+            </div>
+        </header>
+
+        <!-- About Me -->
+        <section class="mb-12">
+            <h2 class="text-2xl font-bold mb-4 border-b-2 border-blue-500 pb-2 flex items-center">
+                <i data-lucide="user" class="w-6 h-6 mr-2"></i> About Me
+            </h2>
+            <p class="text-gray-700 leading-relaxed">
+                I am an undergraduate student from Harbin Institute of Technology (Shenzhen), majoring in Computer Science and Technology. I have a strong research interest in areas such as trustworthy and safety testing for Large Language Models (LLMs), code intelligence, and structured data extraction. I am passionate about exploring cutting-edge technologies and dedicated to applying theoretical knowledge to solve real-world problems.
+            </p>
+        </section>
+
+        <!-- Grid Layout -->
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+
+            <!-- Left Column -->
+            <div>
+                <!-- Tech Stack -->
+                <section class="mb-8">
+                    <h2 class="text-2xl font-bold mb-4 border-b-2 border-green-500 pb-2 flex items-center">
+                        <i data-lucide="cpu" class="w-6 h-6 mr-2"></i> My Tech Stack
+                    </h2>
+                    <div class="space-y-3">
+                        <div class="bg-white p-4 rounded-lg shadow-sm">
+                            <h3 class="font-semibold text-gray-800">Programming Languages</h3>
+                            <p class="text-gray-600">Python, C</p>
+                        </div>
+                        <div class="bg-white p-4 rounded-lg shadow-sm">
+                            <h3 class="font-semibold text-gray-800">Tools & Technologies</h3>
+                            <p class="text-gray-600">Large Language Models (LLMs), Ubuntu, LaTeX</p>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Awards and Honors -->
+                <section>
+                    <h2 class="text-2xl font-bold mb-4 border-b-2 border-yellow-500 pb-2 flex items-center">
+                        <i data-lucide="award" class="w-6 h-6 mr-2"></i> Awards and Honors
+                    </h2>
+                    <ul class="list-disc list-inside space-y-2 text-gray-700">
+                        <li><strong>First Prize (Provincial Level)</strong> - Chinese Mathematics Competitions for University Students (2024)</li>
+                        <li><strong>Participant</strong> - New Youth Global Competency Program (2023-2024)</li>
+                    </ul>
+                </section>
+            </div>
+
+            <!-- Right Column -->
+            <div>
+                <!-- Current Research Focus -->
+                <section class="mb-8">
+                    <h2 class="text-2xl font-bold mb-4 border-b-2 border-purple-500 pb-2 flex items-center">
+                        <i data-lucide="flask-conical" class="w-6 h-6 mr-2"></i> Current Research Focus
+                    </h2>
+                    <div class="space-y-4">
+                        <div class="bg-white p-4 rounded-lg shadow-sm card-hover">
+                            <h3 class="font-semibold text-gray-800">🤖 Trustworthy and Safety Testing for LLMs</h3>
+                            <p class="text-gray-600 mt-1 text-sm">Designing evaluation dimensions and metrics, collecting and processing datasets for comprehensive model evaluation.</p>
+                        </div>
+                        <div class="bg-white p-4 rounded-lg shadow-sm card-hover">
+                            <h3 class="font-semibold text-gray-800">🚀 Code Acceleration and Translation with LLMs</h3>
+                            <p class="text-gray-600 mt-1 text-sm">Researching how to leverage LLMs to improve code efficiency and achieve automatic cross-language translation.</p>
+                        </div>
+                        <div class="bg-white p-4 rounded-lg shadow-sm card-hover">
+                            <h3 class="font-semibold text-gray-800">📄 Structured Data Extraction from Unstructured Sources</h3>
+                            <p class="text-gray-600 mt-1 text-sm">Developing new methods to automatically extract structured data like JSON from unstructured text such as HTML.</p>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Interests -->
+                <section>
+                    <h2 class="text-2xl font-bold mb-4 border-b-2 border-red-500 pb-2 flex items-center">
+                        <i data-lucide="heart" class="w-6 h-6 mr-2"></i> Interests
+                    </h2>
+                    <div class="flex flex-wrap gap-2">
+                        <span class="bg-red-100 text-red-800 text-sm font-medium mr-2 px-2.5 py-0.5 rounded-full">Calligraphy</span>
+                        <span class="bg-green-100 text-green-800 text-sm font-medium mr-2 px-2.5 py-0.5 rounded-full">Hiking</span>
+                        <span class="bg-blue-100 text-blue-800 text-sm font-medium mr-2 px-2.5 py-0.5 rounded-full">Cycling</span>
+                        <span class="bg-yellow-100 text-yellow-800 text-sm font-medium mr-2 px-2.5 py-0.5 rounded-full">Coding</span>
+                    </div>
+                </section>
+            </div>
+        </div>
+
+    </div>
+
+    <!-- Script to activate icons -->
+    <script>
+        lucide.createIcons();
+    </script>
 </body>
 </html>
